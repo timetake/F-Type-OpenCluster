@@ -52,6 +52,17 @@ A second 2015 listing reports the same label with **T2R20045E**. Jaguar's own ca
 
 Jaguar's US quick start guide describes the console USB flash drive under portable audio. Bosch demonstrated a different USB use in an F-TYPE Coupé with its mySPIN phone integration. The phone hosts the app. Jaguar's early X152 touchscreen update bulletin identifies the FCDIM as the recipient of the factory software update and describes an SDD session. Its specified 2014 production range ends at K09823, before the K12557 donor. None of these documents specifies a user-authored page format or verifies a USB build for this display. [US quick start guide, portable media](https://cariffy.com/wp-content/uploads/2024/10/2015-Jaguar-F-Type-Owners-Manual.pdf) · [Bosch F-TYPE demonstration](https://us.bosch-press.com/pressportal/us/en/press-release-593.html) · [Jaguar UPS6413-1bNAS1, pages 1–3](https://static.nhtsa.gov/odi/tsbs/2013/MC-10226630-9999.pdf)
 
+### Which module handles the media USB port
+
+Jaguar workshop manual, X152 section 415-01, *Information and Entertainment System*, in the 2013–2019 compilation, distinguishes the media reader, the center display and the instrument cluster. The chapter headers on PDF pages 5867 and 6016 explicitly say **2017.0 F-TYPE** and carry a March 2015 publication date. Its module descriptions are comparative evidence for the 2015 US car. The installed equipment and software on that car remain unverified.
+
+| Documented equipment | What Jaguar describes | PDF pages |
+| --- | --- | --- |
+| InControl Touch Plus with Integrated Audio Module (IAM) | The console media USB feeds the IAM on both of the IAM variants shown. The center touchscreen provides the controls. | 5875–5879 |
+| HDD navigation with IAM | The IAM sends an image to the center touchscreen. The instrument cluster receives turn instructions separately. This documents a center-screen image path and a more limited type of content on the instrument screen. | 6019–6021 |
+
+The public TOPIx download labeled *SDD Manual Software Download* is the Windows diagnostic application. JLR assigns earlier X152 model years to SDD and requires an active programming subscription to use it for module programming. The SDD installer version cannot identify the application running on a vehicle module. For an offline study of this system, retain the IAM and FCDIM application software numbers under their respective module names when a matching identification report becomes available. No matching original module image or owner-page installer was obtained from the public materials reviewed. [JLR diagnostics coverage](https://topix.jlrext.com/topix/service/procedure/1694991/ODYSSEY_GENERIC/G3345251/en_US?uid=G3345249) · [JLR diagnostic download FAQ](https://topix.jlrext.com/topix/service/procedure/1700886/ODYSSEY_GENERIC/G4142441/en_US?uid=G4142440)
+
 ### Identifying the instrument cluster
 
 An existing Jaguar SDD **module identification** report for the relevant vehicle would answer which instrument cluster it has. Record the IPC hardware/assembly identifier, application software number and calibration number under their original labels. Leave an unavailable field blank. A separate IAM or FCDIM row helps distinguish the infotainment unit and central dashboard screen from the instrument cluster. A cropped report showing the module rows is sufficient. Keep the full report local.
