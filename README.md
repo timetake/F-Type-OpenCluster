@@ -2,7 +2,33 @@
 
 The goal is to customize the factory interface of a US-market 2015 Jaguar F-TYPE S Coupé (X152) using an ordinary USB flash drive. The first vehicle milestone is an owner-authored screen element or page that can be changed in a second USB build and seen in the same place on the original center touchscreen or the five-inch instrument display.
 
-**Vehicle status:** USB installation of a custom page is unverified. The repository currently contains a desktop prototype and identification tools. The [USB interface findings](docs/research.md#usb-and-the-two-original-displays) explain which functions Jaguar documented and what is still missing.
+**Vehicle status.** Original page content can now be packaged and rendered by the project's C99 code. The Jaguar-side loader, display connection, and vehicle data source are still unimplemented. The packages below contain page settings only. The [USB interface findings](docs/research.md#usb-and-the-two-original-displays) cover the factory interfaces examined so far.
+
+## USB page content
+
+| Package | Layout | Readings |
+| --- | --- | --- |
+| [Road](packages/road-page.zip) | Two side-by-side tiles | Oil temperature and coolant temperature in °F |
+| [Sport](packages/sport-page.zip) | Two stacked rows | Engine RPM and throttle position in percent |
+
+Each ZIP contains one plain-text file at `OPENCLUSTER/PAGE.CFG`. The native reader accepts a title of up to 18 uppercase letters, digits, spaces or hyphens, a six-digit RGB accent, a `rows` or `columns` layout, and two metric IDs. The IDs are `oil_f`, `coolant_f`, `rpm` and `throttle_pct`. The [Road config](pages/road.cfg) can be edited directly.
+
+### Render a package and build an edited version
+
+These commands exercise the real page reader in a local directory standing in for a mounted drive. They require a C99 compiler and Python 3.9 or later.
+
+~~~sh
+cc -std=c99 -O2 page/page.c tools/render_page.c -o render_page
+python -m zipfile -e packages/road-page.zip test-drive
+./render_page test-drive road.ppm oil_f=208 coolant_f=194
+python tools/build_page.py pages/sport.cfg custom-page.zip --renderer ./render_page
+python -m zipfile -e custom-page.zip test-drive
+./render_page test-drive sport.ppm rpm=3200 throttle_pct=35
+~~~
+
+On Windows with GCC, use `gcc` and name the output `render_page.exe`. The numbers on these command lines are test inputs. Missing readings appear as two dashes. The PPM file contains the actual pixels drawn by the native renderer.
+
+The [native API](page/page.h) accepts the config bytes, host-provided measurements and a caller-owned RGB888 frame. The 400 × 224 canvas is a logical page size chosen for this project. A factory integration would still need a supported way to start the renderer and present its frame. Tests compare the distributed ZIPs with fresh builds, exercise both layouts, and verify that changing only the title leaves the pixels below the header identical.
 
 ## Try the trip display
 
