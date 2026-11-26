@@ -63,6 +63,16 @@ Jaguar workshop manual, X152 section 415-01, *Information and Entertainment Syst
 
 The public TOPIx download labeled *SDD Manual Software Download* is the Windows diagnostic application. JLR assigns earlier X152 model years to SDD and requires an active programming subscription to use it for module programming. The SDD installer version cannot identify the application running on a vehicle module. For an offline study of this system, retain the IAM and FCDIM application software numbers under their respective module names when a matching identification report becomes available. No matching original module image or owner-page installer was obtained from the public materials reviewed. [JLR diagnostics coverage](https://topix.jlrext.com/topix/service/procedure/1694991/ODYSSEY_GENERIC/G3345251/en_US?uid=G3345249) · [JLR diagnostic download FAQ](https://topix.jlrext.com/topix/service/procedure/1700886/ODYSSEY_GENERIC/G4142441/en_US?uid=G4142440)
 
+### Archived display software for offline comparison
+
+The public SDD 160 calibration archive lists these three files under `160 Calibration Files/VBF/`. Its member sizes agree with the separate catalogs. The archive is a third-party copy. Its single-file extraction returned error 126 for all three entries during this review, so the bytes and headers have not been verified locally. The software identifiers installed on the project car are still unknown. [Archive directory](https://archive.org/download/jlr-sdd-dvd160.04/4_Calibration%20Files%20Collection/)
+
+| File | Listed bytes | Evidence |
+| --- | ---: | --- |
+| EX53-14C060-CF.vbf | 89,351,515 | The catalog identifies this as X152 FCDIM application software. [File record](https://jlrvbf.com/vbf/EX53-14C060-CF) |
+| EX53-14C061-CF.vbf | 30,361 | The catalog identifies this as FCDIM calibration data. [File record](https://obdbdm.com/jlr/EX53-14C061-CF.html) |
+| EX53-14C026-AG.vbf | 738,441 | Jaguar names this IPC software in an early X152 bulletin covering K00001 through K00734. [Jaguar bulletin](https://static.nhtsa.gov/odi/tsbs/2013/MC-10227110-9999.pdf) |
+
 ### Identifying the instrument cluster
 
 An existing Jaguar SDD **module identification** report for the relevant vehicle would answer which instrument cluster it has. Record the IPC hardware/assembly identifier, application software number and calibration number under their original labels. Leave an unavailable field blank. A separate IAM or FCDIM row helps distinguish the infotainment unit and central dashboard screen from the instrument cluster. A cropped report showing the module rows is sufficient. Keep the full report local.
