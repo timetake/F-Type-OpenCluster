@@ -26,6 +26,7 @@ python -m unittest discover -s tests -v
 
 ## Research record
 
+- The [2015 center-display records](docs/research.md#identifying-the-center-touchscreen) pair a dismantler's reported display label with the US parts catalog. Run `python tools/display_lookup.py EX53-10E889-CF` to list every direct match and its source. Identifiers may be entered with or without hyphens. An unknown identifier returns an empty JSON array and exit status 1.
 - [Evidence and next observation](docs/research.md) covers the 2015 display, two cataloged hardware variants, and the production range of Jaguar's 2013 software bulletin.
 - [Firmware catalog](docs/firmware-catalog.csv) records seven published EX53-14C026 fingerprints with source URLs. The test suite uses synthetic containers. No matching vehicle file has been examined for this release.
 - [Project instructions](AGENTS.md) and the project-local Codex configuration select Astra xhigh for the lead and leave the choice of supporting models to the lead.

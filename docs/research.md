@@ -44,6 +44,16 @@ For the 5-inch instrument display, Jaguar documents audio and navigation informa
 
 ## Next observation
 
+### Identifying the center touchscreen
+
+The US parts catalog for a 2015 F-TYPE S 3.0L lists display unit **T2R19384** for production sequences K10666 through K14061. A Swedish dismantler lists a 2015 F-TYPE donor, K12557, within that range. Its multifunction display record gives the label as **EX5310E889CF**, the article number as **T2R14233** and the original number as **T2R19384**. This identifies a center-screen assembly to study without access to the target car. The installed software revision and the donor's original sales market are unknown. [US catalog, Display Unit](https://parts.jaguarcary.com/v-2015-jaguar-f-type--s--3-0l-v6-gas/electrical--navigation-system) · [Donor G-L2858336](https://lagabasen.com/visa-produkter?CarBreaker=G&c=47985155&vehicle=0)
+
+A second 2015 listing reports the same label with **T2R20045E**. Jaguar's own catalog identifies T2R20045E as a remanufactured single-view F-TYPE touchscreen. This explains why the lookup keeps both records. Sharing a label does not establish shared firmware. [Donor K-L797801](https://lagabasen.com/visa-produkter?articleno=EX5310E889CF&vehicle=0) · [Jaguar remanufactured parts catalog, Infotainment & Navigation](https://www.jaguar.com/content/dam/jdx/pdfs/US/JGUK_19B_CAM_RemanParts_Catalogue_Digi_TRADE.pdf)
+
+Jaguar's US quick start guide describes the console USB flash drive under portable audio. Bosch demonstrated a different USB use in an F-TYPE Coupé with its mySPIN phone integration. The phone hosts the app. Jaguar's early X152 touchscreen update bulletin identifies the FCDIM as the recipient of the factory software update and describes an SDD session. Its specified 2014 production range ends at K09823, before the K12557 donor. None of these documents specifies a user-authored page format or verifies a USB build for this display. [US quick start guide, portable media](https://cariffy.com/wp-content/uploads/2024/10/2015-Jaguar-F-Type-Owners-Manual.pdf) · [Bosch F-TYPE demonstration](https://us.bosch-press.com/pressportal/us/en/press-release-593.html) · [Jaguar UPS6413-1bNAS1, pages 1–3](https://static.nhtsa.gov/odi/tsbs/2013/MC-10226630-9999.pdf)
+
+### Identifying the instrument cluster
+
 An existing Jaguar SDD **module identification** report for the relevant vehicle would answer which instrument cluster it has. Record the IPC hardware/assembly identifier, application software number and calibration number under their original labels. Leave an unavailable field blank. A separate IAM or FCDIM row helps distinguish the infotainment unit and central dashboard screen from the instrument cluster. A cropped report showing the module rows is sufficient. Keep the full report local.
 
 With the installed application number and a corresponding authorized local VBF, run the inventory command and retain its digest and block report. Compare that result to the cited catalog. Record an unlisted revision as a new observation. A parked photo of the trip display and the dial scale provides a separate visual reference for the desktop model.
