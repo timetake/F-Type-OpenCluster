@@ -1,0 +1,9 @@
+/firmware/
+/private/
+*.[vV][bB][fF]
+*.bin
+*.hex
+*.s19
+*.blf
+*.asc
+__pycache__/
