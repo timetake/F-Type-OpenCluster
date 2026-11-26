@@ -1,6 +1,8 @@
 # F-Type-OpenCluster
 
-Offline research into the five-inch center display between the analog dials on a US-market 2015 Jaguar F-TYPE S Coupé (X152). The first milestone identifies what the original display can show, catalogs software references and models a small part of its behavior on a computer.
+The goal is to customize the factory interface of a US-market 2015 Jaguar F-TYPE S Coupé (X152) using an ordinary USB flash drive. The first vehicle milestone is an owner-authored screen element or page that can be changed in a second USB build and seen in the same place on the original center touchscreen or the five-inch instrument display.
+
+**Vehicle status:** USB installation of a custom page is unverified. The repository currently contains a desktop prototype and identification tools. The [USB interface findings](docs/research.md#usb-and-the-two-original-displays) explain which functions Jaguar documented and what is still missing.
 
 ## Try the trip display
 
